@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Ver pitch MedSafe - Smart Medication Safety \u0026 Healthy Ageing Platform",
+  "description": "Intelligent medication safety and reminder platform for healthy ageing with AI prescription lookup, drug allergy protection, and clinical side-effect guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

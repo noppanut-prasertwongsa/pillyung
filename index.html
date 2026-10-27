@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>pillyung - Smart Medication Safety & Healthy Ageing Platform</title>
+    <meta name="description" content="Intelligent medication safety and reminder platform for healthy ageing with AI prescription lookup, drug allergy protection, and clinical side-effect guidance." />
+    <meta property="og:title" content="pillyung - Smart Medication Safety & Healthy Ageing Platform" />
+    <meta property="og:description" content="Intelligent medication safety and reminder platform for healthy ageing with AI prescription lookup, drug allergy protection, and clinical side-effect guidance." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Splash Screen / หน้าจอโหลดโลโก้ -->
+    <div id="splash-screen" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-white transition-opacity duration-500" style="position: fixed; inset: 0; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; background-color: #ffffff; transition: opacity 0.5s ease;">
+        <!-- โลโก้แอป หรือไอคอน -->
+        <div class="flex flex-col items-center animate-pulse" style="display: flex; flex-direction: column; align-items: center;">
+            <img 
+                src="/images/Pillyung_logo.png" 
+                alt="Pillyung MedSafe Logo" 
+                style="width: 6rem; height: 6rem; object-fit: contain; margin-bottom: 0.75rem; border-radius: 1rem;" 
+                onerror="this.style.display='none'; document.getElementById('splash-emoji-fallback-html').style.display='flex';"
+            />
+            <div id="splash-emoji-fallback-html" class="w-20 h-20 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold shadow-lg mb-4" style="display: none; width: 5rem; height: 5rem; background-color: #2563eb; border-radius: 1rem; align-items: center; justify-content: center; color: white; font-size: 1.875rem; font-weight: bold; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); margin-bottom: 1rem;">
+                💊
+            </div>
+            <h1 class="text-xl font-bold text-gray-800" style="font-size: 1.25rem; font-weight: bold; color: #1f2937; margin: 0;">MedSafe</h1>
+            <p class="text-sm text-gray-500 mt-1" style="font-size: 0.875rem; color: #6b7280; margin-top: 0.25rem;">Smart Medication Safety</p>
+        </div>
+        <!-- ตัวโหลด (Spinner) -->
+        <div class="mt-8 w-8 h-8 border-4 border-blue-600 border-t-transparent rounded-full animate-spin" style="margin-top: 2rem; width: 2rem; height: 2rem; border-width: 4px; border-style: solid; border-color: #2563eb; border-top-color: transparent; border-radius: 9999px;"></div>
+    </div>
+    <script>
+      (function() {
+        function dismissSplash() {
+          var splash = document.getElementById('splash-screen');
+          if (splash) {
+            setTimeout(function() {
+              splash.style.opacity = '0';
+              splash.style.pointerEvents = 'none';
+              setTimeout(function() {
+                if (splash && splash.parentNode) {
+                  splash.parentNode.removeChild(splash);
+                }
+              }, 500);
+            }, 800);
+          }
+        }
+        if (document.readyState === 'complete') {
+          dismissSplash();
+        } else {
+          window.addEventListener('load', dismissSplash);
+        }
+      })();
+    </script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
