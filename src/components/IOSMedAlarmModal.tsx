@@ -59,7 +59,7 @@ export const IOSMedAlarmModal: React.FC<IOSMedAlarmModalProps> = ({
       setIsMuted(true);
     } else {
       setIsMuted(false);
-      startLoopingAlarmSound(soundType, 4200);
+      startLoopingAlarmSound(soundType, 10000);
     }
   };
 
@@ -70,7 +70,7 @@ export const IOSMedAlarmModal: React.FC<IOSMedAlarmModalProps> = ({
       setDragProgress(0);
       setIsDismissing(false);
       // Play loop sound
-      startLoopingAlarmSound(soundType, 4200);
+      startLoopingAlarmSound(soundType, 10000);
     } else {
       stopLoopingAlarmSound();
     }

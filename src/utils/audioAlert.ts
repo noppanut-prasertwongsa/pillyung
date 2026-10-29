@@ -121,7 +121,7 @@ export const playSingleAlarmSound = (soundType: AlarmSoundType = 'nene') => {
     // 2. Clear loud iconic Thai vocal announcement: "เนเน่ นายแน่มาก! ได้เวลากินยาแล้วครับ!"
     // Delayed slightly by 250ms so fanfare leads the cue
     setTimeout(() => {
-      speakThaiUtterance('เนเน่ นายแน่มาก! เนเน่ นายแน่มาก! ได้เวลารับประทานยาแล้วครับ!', 1.25, 1.05);
+      speakThaiUtterance('ขอแจ้งเตือนครับ อีก 30 นาที ได้เวลารับประทานยา', 1.0, 1.0);
     }, 250);
   } else if (soundType === 'doctor') {
     if (ctx) {
